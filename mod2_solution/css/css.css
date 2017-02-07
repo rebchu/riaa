@@ -1,0 +1,64 @@
+/* base styles */
+*{
+	box-sizing: border-box;
+}
+
+h1{
+	text-align: center;
+}
+
+section{
+	background-color: gray;
+	border: 1px solid black;
+	position: relative;
+	padding-top: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	float: left;
+
+}
+
+header{
+	width: 90px;
+	height: 20px;
+	text-align: center;
+	border: 1px solid black;
+	position: absolute;
+	right:0;
+	top:0;
+}
+
+header.chicken {
+	background-color: #FF00FF;
+}
+
+header.beef{
+	background-color: #FFFF00;
+}
+
+header.sushi{
+	background-color: #00FFFF;
+}
+
+/*********** Desktop **********/
+@media (min-width: 992px){
+	section{
+		width: 33%;
+	}
+}
+/* don't overlap range boundaries */
+
+/********** Tablet *********/
+@media (min-width: 768px) and (max-width: 991px){
+	section.chicken, section.beef{
+		width: 50%;
+	}
+}
+
+/********** Mobile *********/
+@media (max-width: 767px){
+	section{
+		width: 100%;
+	}
+}

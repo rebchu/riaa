@@ -1,0 +1,119 @@
+/* base styles */
+*{
+	box-sizing: border-box;
+	font-family: helvetica, arial, sans-serif;
+}
+
+h1{
+	text-align: center;
+}
+
+section{
+	background-color: gray;
+	border: 1px solid black;
+	position: relative;
+}
+
+p{
+	overflow: hidden;
+	height: 100px;
+	padding: 10px 10px 10px 10px;
+}
+
+p:hover{
+	overflow: auto;
+	cursor: n-resize;
+}
+
+div{
+	width: 33%;
+	padding: 10px;
+	float: left;
+}
+
+#chicken-extra, #beef-extra, #sushi-extra{
+	display: none;
+}
+
+header{
+	width: 90px;
+	height: auto;
+	text-align: center;
+	border: 1px solid black;
+	position: absolute;
+	right:0;
+	top:0;
+}
+
+header.chicken {
+	background-color: #FF00FF;
+}
+
+header.beef{
+	background-color: #FFFF00;
+}
+
+header.sushi{
+	background-color: #00FFFF;
+}
+
+/*********** Desktop **********/
+@media (min-width: 992px){
+	div{
+		width: 33%;
+	}
+	description{
+		display: hidden;
+	}
+	#mobileHeader{
+		display:none;
+	}
+}
+/* don't overlap range boundaries */
+
+/********** Tablet *********/
+@media (min-width: 768px) and (max-width: 991px){
+	div.chicken, div.beef{
+		width: 50%;
+	}
+	div.sushi{
+		width: 100%;
+	}
+	description{
+		display: hidden;
+	}
+	#mobileHeader{
+		display:none;
+	}
+}
+
+/********** Mobile *********/
+@media (max-width: 767px){
+	div{
+		width: 100%;
+	}
+
+	#desktopTabletHeader{
+		display: none;
+	}
+
+	#mobileHeader{
+		font-family: georgia;
+		font-size: 20px;
+		text-align: left;
+	}
+
+	#chicken-extra, #beef-extra, #sushi-extra{
+		display: inline;
+	}
+
+	h1{
+		padding-left: 10px;
+	}
+
+	header{
+		width: 100%;
+		text-align: center;
+		position: relative;
+	}
+}

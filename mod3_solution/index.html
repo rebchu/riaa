@@ -11,60 +11,87 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<script type="js/jquery-3.1.1.min.js"></script>
-	<script type="js/bootstrap.min.js"></script>
-	<script type="js/script.js"></script>
 
-	<script type="text/javascript"></script>
 
 	<!-- Start Navigation Bar -->
 	<nav class="navbar navbar-default">
-	  	<div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
+	  	<div class="container">
+
 	    	<div class="navbar-header">
-	      		<button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-		      	</button>
-	      		<a class="navbar-brand" href="#">Food, LLC</a>
+				<!-- Menu Button -->
+				<button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="true">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Brand Name -->
+	      		<div class="navbar-brand">
+	      			<h1>Food, LLC</h1>
+	      		</div>
 	    	</div>
+
+	    	<!-- Drop down menu items -->
+		     <div id="collapsable-nav" class="collapse navbar-collapse">
+	           <ul id="nav-list" class="nav navbar-nav navbar-right">
+	            <li>
+	              <span class = "visible-xs"><a href="#chicken">Chicken</a></span>
+	            </li>
+	            <li>
+	              <span class = "visible-xs"><a href="#beef">Beef</a></span>
+	            </li>
+	            <li>
+	              <span class = "visible-xs"><a href="#sushi">Sushi</a></span>
+	            </li>
+	          </ul>
+	        </div>
+
 	    </div>
 	</nav>
-
-
-
 	<!-- End Navigation Bar-->
 	
-	<h1 id="desktopTabletHeader">Our Menu</h1>
-	<h1 id="mobileHeader">Categories</h1>
+	<h1 id="top" class="text-center">Our Menu</h1>
 
-	<div class = "chicken">
-	<section class = "chicken">
-		<header class = "chicken">Chicken <description id ="chicken-extra">: Chicken Attack, Go Chicken Go, You Own the Sky</description></header>
-		
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.
-		</p>
-	</section>
+	<!-- Content -->
+	<div class = "container-fluid">
+		<div class = "row">
+			<div class  = "col-md-4 col-sm-6 col-xs-12">
+				<section id = "chicken">
+				<h3 class="text-center">Chicken</h3>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. (End of Chicken Section)
+				<br><br> 
+				<a href="#top">Back to Top</a>
+				</section>
+			</div>
+			<div class = "col-md-4 col-sm-6 col-xs-12">
+				<section id = "beef">
+				<h3 class="text-center">Beef</h3>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum.  (End of Chicken Beef) 
+				<br><br> 
+				<a href="#top">Back to Top</a>
+				</section>
+			</div>
+			<div class  = "col-md-4 col-sm-12 col-xs-12">
+				<section id = "sushi">
+				<h3 class="text-center">Sushi</h3>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum.  (End of Sushi Section) 
+				<br><br> 
+				<a href="#top">Back to Top</a>
+				</section>
+			</div>
+		</div>
 	</div>
 
-	<div class ="beef">
-	<section class = "beef">
-		<header class = "beef">Beef <description id = "beef-extra">: They used to go moo moo moo, and milk milk milk. Now they go yum yum yum</description></header>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.</p>
-	</section>
-	</div>
 
-	<div class = "sushi">
-	<section class = "sushi">
-		<header class = "sushi">Sushi <description id = "sushi-extra">: Dead fish chillin' on your pile of white rice</description></header>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo nulla a ligula convallis, facilisis posuere sapien vestibulum. Aliquam vitae felis tempus mauris sodales laoreet. Fusce accumsan volutpat tortor eu viverra. Vivamus et eleifend urna, ut blandit urna. Donec condimentum, ipsum in condimentum placerat, augue libero tristique mi, id feugiat velit lorem quis ante. Donec in odio rutrum, ultricies elit pulvinar, suscipit ligula. Phasellus venenatis hendrerit lectus sit amet tempor. Phasellus lobortis vehicula fringilla. Fusce nulla odio, ullamcorper sed interdum vitae, hendrerit laoreet odio. Curabitur id dapibus risus. Phasellus ex enim, porta eu urna ac, hendrerit porta risus.</p>
-	</section>
-	</div>
+	<!-- jQuery -->
 
+	<!--
+	<script type="js/jquery-3.1.1.min.js"></script>
+	<script type="js/bootstrap.min.js"></script>
+	<script type="js/script.js"></script>
+-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </body>
 </html>

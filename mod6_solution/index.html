@@ -15,12 +15,13 @@
      <h1>Lunch Checker</h1>
       <div ng-controller="LunchCheckController">
          <div class="form-group">
-             <!-- do NOT consider and empty item -->
+             <!-- do NOT consider an empty item -->
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control"
              ng-model="inputDishes"
              style = "border-color:{{styleColor}}">
+             Does not consider empty items
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click = "displayMessage();">Check If Too Much</button>

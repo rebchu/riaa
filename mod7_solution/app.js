@@ -4,32 +4,49 @@
 angular.module('ShoppingListCheckOff', [])
 .controller('ToBuyController', ToBuyController)
 .controller('AlreadyBoughtController', AlreadyBoughtController)
-.service('ShoppingListCheckOffService', ShoppingListCheckOffService);
+.service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+.filter('calculatePrice', CalculatePriceFilter);
 
 ToBuyController.$inject = ['ShoppingListCheckOffService'];
 function ToBuyController(ShoppingListCheckOffService) {
 	var buy = this;
 		
-	ShoppingListCheckOffService.addBuyItem("Cookie", 10);
-	ShoppingListCheckOffService.addBuyItem("Milk", 50);
-	ShoppingListCheckOffService.addBuyItem("Happiness", 0);
-
-
-	buy.empty = ShoppingListCheckOffService.checkBuyEmpty();
+	ShoppingListCheckOffService.addBuyItem("Cookies", 10, 5);
+	ShoppingListCheckOffService.addBuyItem("Gallons of Milk", 50, 5);
+	ShoppingListCheckOffService.addBuyItem("Happiness", 0, 0);
+	ShoppingListCheckOffService.addBuyItem("4.0 GPA", 2, 1000000);
+	ShoppingListCheckOffService.addBuyItem("Hitchcock's Love", 1, 0);
 
 	buy.toBuyList = ShoppingListCheckOffService.getBuyItems();
 
 	buy.moveBoughtItem = function (itemIndex) {
 	  	ShoppingListCheckOffService.moveItem(itemIndex);
 	};
+
+	buy.empty = function(){
+		return buy.toBuyList.length == 0;
+	}
 }
 
-AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-function AlreadyBoughtController(ShoppingListCheckOffService) {
-  	var bought = this;
+AlreadyBoughtController.$inject = ['ShoppingListCheckOffService', 'calculatePriceFilter'];
+function AlreadyBoughtController(ShoppingListCheckOffService, calculatePriceFilter) {
+  	var bought = this;  	
+  	bought.boughtList = ShoppingListCheckOffService.getBoughtItems()
   	bought.empty = ShoppingListCheckOffService.checkBoughtEmpty();
-  	
-  	bought.boughtList = ShoppingListCheckOffService.getBoughtItems();
+
+  	bought.empty = function(){
+		return bought.boughtList.length == 0;
+	}
+
+	bought.totalPrice = function(quantity, price){
+		return calculatePriceFilter(quantity, price);
+	}
+}
+
+function CalculatePriceFilter(){
+	return function(quantity, price){
+		return "$$$"+quantity*price;
+	}
 }
 
 function ShoppingListCheckOffService() {
@@ -39,25 +56,18 @@ function ShoppingListCheckOffService() {
   var toBuyList = [];
   var boughtList = [];
 
-  service.moveItem = function (itemIdex) {
-  	toBuyList.splice(itemIdex, 1);
- 	// push to boughtList;
+  service.moveItem = function (itemIndex) {
+  	boughtList.push(toBuyList[itemIndex]);
+  	toBuyList.splice(itemIndex, 1);
   };
 
-  service.addBuyItem = function (itemName, quantity) {
+  service.addBuyItem = function (itemName, quantity, price) {
     var toBuyItem = {
       name: itemName,
-      quantity: quantity
+      quantity: quantity,
+      pricePerItem: price
     };
     toBuyList.push(toBuyItem);
-  };
-  
-  service.addBoughtItem = function (itemName, quantity) {
-    var boughtItem = {
-      name: itemName,
-      quantity: quantity
-    };
-    boughtList.push(boughtItem);
   };
 
 
@@ -78,8 +88,5 @@ function ShoppingListCheckOffService() {
   };
 
 }
-
-
-
 
 })();

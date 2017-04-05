@@ -8,3 +8,4 @@
 5. [Module 5 Solution](https://rebchu.github.io/riaa/mod5_solution/) 
 6. [Module 6 Solution](https://rebchu.github.io/riaa/mod6_solution/) 
 7. [Module 7 Solution](https://rebchu.github.io/riaa/mod7_solution/) 
+8. [Module 8 Solution](https://rebchu.github.io/riaa/mod8_solution/) 

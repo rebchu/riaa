@@ -1,0 +1,23 @@
+<div ng-if = "myInfoCtrl.isRegistered();">
+	<h1>Registrated Information</h1>
+	<ul>
+		<li><b>Firstname: </b> {{myInfoCtrl.user.firstname}}</li>
+		<li><b>Lastname: </b> {{myInfoCtrl.user.lastname}}</li>
+		<li><b>Phone #: </b> {{myInfoCtrl.user.phone}}</li>
+		<li><b>Email Address: </b> {{myInfoCtrl.user.email}}</li>
+		<li><b>Favorite Dish: </b> {{myInfoCtrl.user.menuItem.short_name}}
+			<ol>
+				<li><b>Dish Dish Title: </b>{{myInfoCtrl.user.menuItem.name}}</li>
+				<li><b>Dish Dish Picture</b>
+				<img src="{{myInfoCtrl.favDishImg}}" alt="{{myInfoCtrl.user.menuItem.name}}"></li>
+			</ol>
+
+		</li>
+	</ul>
+
+
+</div>
+
+<div ng-if = "!myInfoCtrl.isRegistered();">
+	 Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
